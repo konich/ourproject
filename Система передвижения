@@ -1,0 +1,23 @@
+{
+// Передвижение
+
+
+if(mouse_button == mb_left)
+{
+ ox = mouse_x;
+ oy = mouse_y;
+ image_angle = point_direction(mouse_x, mouse_y, self.x, self.y);
+ sp = 5;
+}
+
+
+if(mouse_lastbutton == mb_left)
+ {
+ if(mp_linear_step(ox,oy,sp,true))
+  {
+   sp = 0;
+   io_clear();
+  }
+ }
+// Конец передвижения
+}
